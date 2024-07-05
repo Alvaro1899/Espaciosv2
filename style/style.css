@@ -165,11 +165,11 @@ body {
     flex-direction: column;
     align-items: center;
 }
-.cont .cont-foto h1{
+.cont h1{
    font-size: 13px;
     text-align:center;
 }
-.cont .cont-foto p,
+.cont p,
 .cont .cont-foto h2{
     font-size: 13px;
 }
