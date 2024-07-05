@@ -83,6 +83,19 @@ body {
     transform: scale(1.1);
 }
 
+.contacto {
+  color: #5e6d6b;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.contacto img {
+  margin-right: 0.5rem;
+}
+
 @media screen and (max-width: 800px){
     .nav-links, .btn {
         display: none;
@@ -218,17 +231,4 @@ body {
     .cont-texto {
         flex: 2;
     }
-}
-
-.contacto {
-  color: #5e6d6b;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 1.5rem;
-}
-
-.contacto img {
-  margin-right: 0.5rem;
 }
