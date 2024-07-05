@@ -90,6 +90,10 @@ body {
     .menu {
         display: inherit;
     }
+   .header .logo img {
+    height: 40px;
+    width: auto;
+    }
 }
 
 /*Nav*/
