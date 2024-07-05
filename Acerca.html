@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    <div class="cont">
+        <div class="cont-foto">
+            <a href="Contacto.html" class="user"><img src="img/Perfil.jpg" alt="Foto de perfil"></a>
+                <div class=cont-foto-txt>
+                    <h1>Estudios:</h1>
+                    <p>Lic. en Economía-UAM</p>
+                    <p>Ing. en Desarrollo de Software - UnADM (En curso)</p>
+                </div>
+            </div>
+        <div class="cont-texto">
+            <h1>¡Bienvenidx a mi página web!</h1>
+            <p>Soy Álvaro Martínez Rodríguez, licenciadx en Economía del área de concentración de Economía de la innovación: Empresas, Redes y Territorio por la UAM-Azcapotzalco en donde también tuve la oportunidad de trabajar como ayudante de investigación.</p>
+            <p>Durante mi tiempo en la UAM Azcapotzalco, he publicado algunos trabajos interesantes, como un capítulo de libro basado en mi tesis titulado "Impacto del turismo en los municipios de Quintana Roo". Puedes encontrar la tesis original en el sitio web de <strong>Relaciones Productivas en México</strong>. Además, he escrito varias entradas de blog para la página Boletín de Ciudades y Regiones, las cuales son: <a href="http://boletinciudadesyregiones.org/2022/08/introduccion-estimacion-en-areas.html" target="_blank">"Introducción a la Estimación en Áreas Pequeñas (EAP)"</a> y <a href="https://www.boletinciudadesyregiones.org/2021/10/principales-ingresos-y-gastos-de-los.html" target="_blank">"Principales ingresos y gastos de los hogares por estado en México, 2018"</a>.</p>
+            <p>En esta página web, mi objetivo es ofrecer información y recursos útiles técnicos en software que he ido aprendiendo a lo largo del tiempo, además de la creación de mapas, para que los apliques en tu vida diaria o en tu propio campo profesional. Si tienes alguna pregunta, no dudes en contactarme. Estoy aquí para ayudarte y compartir mis conocimientos.</p>
+            <p>También quiero aprovechar esta oportunidad para agradecer a los doctores con los que trabajé y conviví, ya que aprendí mucho más allá de lo académico, y ellos son parte de la inspiración detrás de esta página.</p>
+        </div>
+    </div>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    </script>
+    <script type="text/javascript"src="js/nav.js"></script>
+</body>
+</html>
