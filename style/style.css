@@ -100,7 +100,7 @@ body {
   background-color: red;
   font-size: 20px;
   padding: 10px;
-  display: fixed;
+  display: flex;
 }
 .cursos-principal a{
     text-decoration: none;
@@ -111,11 +111,13 @@ body {
     border-radius:10px;
     color: #ecf0ef;
 }
-.cursos-principal img{
-    height: 120px;
-    width: auto;
-    margin-botom:5px;
-    align-items:Center;
+.cursos-principal img {
+  height: 40px;
+  width: auto;
+  margin-bottom: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (max-width: 800px){
