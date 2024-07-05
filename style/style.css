@@ -97,11 +97,28 @@ body {
   margin-right: 0.5rem;
 }
 
+.carrusel-container {
+  display: flex;
+  align-items: center;
+}
+
+.carrusel {
+  overflow: hidden;
+  width: 80%;
+}
+
 .cursos-principal{
   font-size: 20px;
   padding: 10px;
   display: flex;
+  transition: transform 0.5s ease;
 }
+
+.cursos-principal div{
+  min-width: 20%;
+  /* Ajusta esto según cuántos cursos quieres mostrar al mismo tiempo */
+}
+
 .cursos-principal a{
     text-decoration: none;
 }
@@ -123,6 +140,18 @@ body {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.carrusel-button {
+  background-color: #ccc;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.carrusel-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
 }
 
 @media screen and (max-width: 800px){
