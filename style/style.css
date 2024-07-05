@@ -112,9 +112,10 @@ body {
     color: #ecf0ef;
 }
 .cursos-principal img{
-    height: 40px;
+    height: 120px;
     width: auto;
     margin-botom:5px;
+    align-items:Center;
 }
 
 @media screen and (max-width: 800px){
