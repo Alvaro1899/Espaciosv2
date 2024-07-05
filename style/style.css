@@ -114,7 +114,7 @@ body {
 }
 .cursos-principal .curso1:hover,
 .cursos-principal .curso2:hover{
-    transform: scale(1.1);
+    transform: scale(1.03);
 }
 .cursos-principal img {
   height: 160px;
