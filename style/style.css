@@ -96,6 +96,26 @@ body {
   margin-right: 0.5rem;
 }
 
+.cursos-principal{
+  background-color: red;
+  font-size: 20px;
+  padding: 10px;
+  display: fixed;
+}
+.cursos-principal a{
+    text-decoration: none;
+}
+.cursos-principal .curso1,
+.cursos-principal .curso2{
+    background: white;
+    border-radius:10px;
+}
+.cursos-principal img{
+    height: 40px;
+    width: auto;
+    margin-botom:5px;
+}
+
 @media screen and (max-width: 800px){
     .nav-links, .btn {
         display: none;
