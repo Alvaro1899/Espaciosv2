@@ -165,8 +165,12 @@ body {
     flex-direction: column;
     align-items: center;
 }
-.cont .cont-foto p,
 .cont .cont-foto h1{
+   font-size: 13px;
+    text-align:center;
+}
+.cont .cont-foto p,
+.cont .cont-foto h2{
     font-size: 13px;
 }
 .cont .cont-foto img {
