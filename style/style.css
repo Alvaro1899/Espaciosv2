@@ -90,6 +90,7 @@ body {
   align-items: center;
   justify-content: center;
   margin-top: 1.5rem;
+  gap: 10%
 }
 
 .contacto img {
@@ -109,6 +110,11 @@ body {
     background: white;
     border-radius:10px;
     color: #ecf0ef;
+    transition: all 0.3s;
+}
+.cursos-principal .curso1:hover,
+.cursos-principal .curso2:hover{
+    transform: scale(1.1);
 }
 .cursos-principal img {
   height: 40px;
