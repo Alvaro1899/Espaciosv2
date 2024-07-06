@@ -152,20 +152,14 @@ body {
     height: 13px;
     width: 13px;
     opacity: 0.5;
-  }
-  .slider-wrapper .swiper-pagination-bullet-active {
-    opacity: 1;
-  }
-  .slider-wrapper .swiper-slide-button {
+}
+.slider-wrapper .swiper-pagination-bullet-active {
+opacity: 1;
+}
+.cursos a{
+    text-decoration: none;
     color: #fff;
-    margin-top: -55px;
-    transition: 0.2s ease;
-  }
-  .slider-wrapper .swiper-slide-button:hover {
-    color: #4658ff;
-  }
-
-
+}
 @media screen and (max-width: 800px){
     .nav-links, .btn {
         display: none;

@@ -1,0 +1,193 @@
+<link rel="stylesheet" href="style/styleCursos.css">
+
+# Búsqueda de puntos de interés con Google Maps y R Studio
+
+El objetivo de esta guía es obtener, a través de dos métodos distintos, una serie de puntos de nuestro interés. El primer método utiliza MyMaps de Google y el segundo es por medio de R Studio y una API KEY proporcionada por Google.
+
+### Método 1:
+
+1. Abre tu navegador web y accede a Google Maps. Para ello, escribe en la barra de búsqueda "Google Maps" y haz clic en el primer resultado que aparece.
+
+![](img\CR_maps\Imagen1_G.png)
+
+2.	Una vez que estés en la página principal de Google Maps, haz clic en el botón "Menú" que se encuentra en la esquina superior izquierda de la pantalla. El botón "Menú" se representa con tres líneas horizontales.
+
+![](img\CR_maps\Imagen2_G.png)
+
+
+3.	Se desplegará un menú lateral. Haz clic en "Tus sitios".
+
+
+![](img\CR_maps\Imagen3_G.png)
+
+
+4.	Si ya tienes un mapa personalizado en Google Maps, haz clic en el mapa que deseas descargar en KML. Si aún no tienes un mapa personalizado, crea uno haciendo clic en "Crear Mapa".
+
+
+![](img\CR_maps\Imagen4_G.png)
+
+a.	En caso de no tener ningún mapa, has lo siguiente: En la página de "Tus sitios" de Google Maps, haz clic en el botón "Crear Mapa" que se encuentra en la esquina inferior derecha de la pantalla.
+
+b.	En la página adicional que se abrió da clic en el nombre. Se abrirá un cuadro de diálogo en el que puedes asignar un nombre a tu mapa y una descripción opcional. Ingresa el nombre y la descripción que desees y haz clic en "Guardar".
+
+![](img\CR_maps\Imagen5_G.png)
+
+![](img\CR_maps\Imagen6_G.png)
+
+
+c. A continuación, puedes comenzar a agregar lugares o marcadores a tu mapa. Puedes hacerlo de varias maneras:
+
+d. Busca un lugar específico en la barra de búsqueda en la parte superior de la pantalla. Una vez que hayas encontrado el lugar que deseas, haz clic en "Agregar a mapa". El lugar se agregará como un marcador en tu mapa.
+
+![](img\CR_maps\Imagen7_G.png)
+
+e. Haz clic en el botón "Agregar marcador" en la barra de herramientas situada debajo de la barra de búsqueda. Haz clic en el lugar donde deseas agregar el marcador en el mapa y se creará un marcador en esa ubicación. (También se pueden agregar desde el menú en el botón de más).
+
+![](img\CR_maps\Imagen8_G.png)
+
+![](img\CR_maps\Imagen9_G.png)
+
+
+f. Haz clic en el botón "Línea" o "Forma" en la barra de herramientas para dibujar una línea o una forma en el mapa. Haz clic en el mapa para crear puntos y luego haz clic en "Finalizar" para completar la línea o la forma.
+
+![](img\CR_maps\Imagen10_G.png)
+
+g. Una vez que hayas agregado algunos lugares o marcadores a tu mapa, puedes personalizarlos. Haz clic en un marcador o una línea/forma existente en el mapa para ver las opciones de personalización disponibles. Por ejemplo, puedes cambiar el color del marcador, agregar una descripción, etc.
+
+h. Continúa agregando lugares, marcadores, líneas y formas a tu mapa hasta que esté completo.
+
+![](img\CR_maps\Imagen11_G.png)
+
+i. Una vez que hayas terminado de crear tu mapa personalizado, sigue los pasos del punto 5 del manual anterior para descargar el mapa en formato KML y luego los pasos del punto 8 para importarlo a QGIS.
+
+5.	Una vez que hayas seleccionado o creado el mapa, haz clic en el botón "ters puntos" en la esquina superior derecha del panel derecho.
+
+6.	Se abrirá una ventana emergente con diferentes opciones de compartir. Haz clic en "Exportar en formato KML".
+
+![](img\CR_maps\Imagen12_G.png)
+
+![](img\CR_maps\Imagen13_G.png)
+
+7.	Se descargará un archivo KML en tu computadora.
+
+8.	Abre QGIS en tu computadora. Si aún no tienes QGIS, puedes descargarlo de manera gratuita en https://www.qgis.org/en/site/.
+
+9.	Una vez que hayas abierto QGIS, haz clic en "Añadir capa" en la barra de herramientas.
+
+10.	Selecciona "Añadir capa vectorial" y luego "Archivo".
+
+11.	Busca y selecciona el archivo KML que acabas de descargar y haz clic en "Abrir".
+
+12.	La capa se cargará en QGIS y aparecerá en la lista de capas. Haz clic en "Aceptar" para agregar la capa a tu proyecto.
+
+•	Palabras clave, ejemplos para la zona metropolitana del valle de méxico
+•	Museos CDMX
+•	Monumentos históricos CDMX
+•	Restaurantes CDMX
+•	Cafeterías CDMX
+•	Bares CDMX
+•	Tiendas de comestibles CDMX
+•	Parques CDMX
+•	Teatros CDMX
+•	Cines CDMX
+•	Estadios CDMX
+•	Gimnasios CDMX
+•	Piscinas CDMX
+•	Spa CDMX
+•	Hoteles CDMX
+•	Hostales CDMX
+•	Lugares turísticos CDMX
+•	Zonas arqueológicas CDMX
+•	Centros comerciales CDMX
+•	Mercados CDMX
+•	Plazas CDMX
+
+
+
+### Método 2:
+  
+1. Obtener una API KEY: Primero, debes obtener una API KEY de Google.
+
+  a. Ve al sitio web de Google Cloud Platform (https://console.cloud.google.com/).
+  b. Crea una cuenta de Google Cloud e inicia sesión.
+  c. Una vez iniciada la sesión, haz clic en "Go to console".
+
+![](img\CR_maps\Imagen1R_G.png)
+
+d. Crea un nuevo proyecto haciendo clic en el área superior izquierda. El botón tendrá por defecto escrito "My first Project", pero el usuario puede seleccionar ese proyecto o crear uno nuevo. Si deseas crear uno nuevo, sigue los pasos de e - i.
+e. Dale un nombre al proyecto y selecciona alguna organización si existe. Haz clic en "Crear".
+
+![](img\CR_maps\Imagen2R_G.png)
+
+f. Cuando se cree el proyecto, serás redirigido a una página con varios paneles. Debes seleccionar el que se llama "Credenciales - APIs y servicios". En caso de que Google no te redirija a la página deseada, es posible entrar a través del panel desplegable en la parte superior izquierda, en las 3 barras a lado del logo de Google. Allí, selecciona "API y servicios" -> "Credenciales".
+g. Aquí es donde se creará nuestra API KEY. Haz clic en el botón de "crear credenciales" y luego "Clave API". Posteriormente, guarda la clave y haz clic en "Cerrar".
+
+![](img\CR_maps\Imagen3R_G.png)
+
+h. Ahora debes activar los servicios que se van a utilizar. Haz clic en "APIs y servicios" y "APIs y servicios habilitados".
+
+![](img\CR_maps\Imagen4R_G.png)
+
+i. En la nueva página, haz clic en "Habilitar APIs y servicios". Busca y habilita "Maps JavaScript API" y "Places API". Estos dos servicios permiten consultar información de lugares en una variedad de categorías, como establecimientos, puntos de interés destacados, ubicaciones geográficas y más.
+
+2. Es momento de entrar a R Studio.
+a. Abre y guarda un archivo script.
+b. Instala la paquetería requerida con install.packages("googleway") y carga la librería con library(googleway).
+
+```{r}
+library(googleway)
+```
+
+c. Guarda la API KEY en una variable de la siguiente forma:
+
+```{r}
+# Sustituye por tu API KEY
+API <- 'TU-API-KEY'
+```
+  
+d. Ahora, utilizaremos la siguiente función google_places() de la siguiente forma para buscar hoteles cerca del puerto de ferry en Cozumel, México:
+  
+  i. Búsqueda por un punto específico.
+  
+```{r}
+res <- google_places(location = c(20.511373, -86.949984),
+                     place_type = "restaurant",
+                     radius = 1000,
+                     key = API)
+```
+
+
+  ii. Usa "next_page_token" de la búsqueda previa para buscar los siguientes 20 resultados.
+  
+```{r}
+res_dig <- google_places(location = c(20.511373, -86.949984),
+                         place_type = "Hotel",
+                         page_token = res$next_page_token,
+                         radius = 1000,
+                         key = API)
+```
+  
+  iii. Guarda tu busqueda como un data.frame
+  
+```{r}
+# Convertir el resultado de la búsqueda cercana en un data.frame
+Busqueda1 <- as.data.frame(res$results)
+
+# Convertir el resultado de la búsqueda de texto en un data.frame
+Busqueda2 <- as.data.frame(res_dig$results)
+```
+Donde: 
+'location = NULL´ coordenadas de latitud/longitud alrededor del cual se buscará la información del lugar. 
+ ´radius = NULL´, distancia en metros a la redonda para buscar.
+´place_type = NULL´, Restringe los resultados a lugares que coincidan con el tipo especificado.  
+´key = API´Usa la llave guardada en nuestra variable API. Tambien se puede poner directamente.
+´page_token = NULL´ Busca los siguientes 20 resultados a la búsqueda previa.
+
+  iv. Visualizamos el primer resutlado. 
+  
+```{r eval=FALSE, message=FALSE, warning=FALSE}
+library(dplyr)
+vista <- select(Busqueda1, name, vicinity)
+View(vista)
+```
+- Nota: Para más información sobre la función ´google_places()´visite: https://rdrr.io/cran/googleway/man/google_places.html

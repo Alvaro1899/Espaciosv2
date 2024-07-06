@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espacios</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    <iframe src="CR_maps.html" onload="resizeIframe(this)" style="width: 100%;"></iframe>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    </script>
+    <script type="text/javascript"src="js/nav.js"></script>
+    <script>
+        function resizeIframe(iframe) {
+            iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+            iframe.style.width = '100%';
+            
+            // Observar cambios en el contenido del iframe
+            const resizeObserver = new ResizeObserver(() => {
+                iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+            });
+            resizeObserver.observe(iframe.contentWindow.document.body);
+        }
+    </script>
+</body>
+</html>
