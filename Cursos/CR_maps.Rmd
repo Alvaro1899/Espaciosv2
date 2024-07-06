@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="style/styleCursos.css">
+<link rel="stylesheet" href="../style/styleCursos.css">
 
 # Búsqueda de puntos de interés con Google Maps y R Studio
 
