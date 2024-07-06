@@ -4,31 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Espacios</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
     <div id="header-container"></div>
-    <div class="carrusel-container">
-          <button class="carrusel-button carrusel-button-left">&lt;</button>
-    <div class="carrusel">
-    <div class="cursos-principal">
-        <div class="curso1">
-            <a href="" class="curso1-1">
-                <img src="img/rmaps.png" alt="Curso de rmaps">
-                <p>Caja del primer cajon. Aqui debe ir la descripcion del curso y falta añadir el enlace del curso</p>
-            </a>
+        <div class="curso-principal swiper">
+            <div class="slider-wrapper">
+                <div class="cursos swiper-wrapper">
+                    <div class="cursos-item swiper-slide">
+                        <img src="img/Qgis.png" alt="" class="cursos-img">
+                        <h2 class="cursos-nombre">Caja del primer curso</h2>
+                        <p class="cursos-desc">Aqui debe ir la descripcion del curso y falta añadir el enlace del curso</p>
+                    </div>
+                    <div class="cursos-item swiper-slide">
+                        <img src="img/github.png" alt="" class="cursos-img">
+                        <h2 class="cursos-nombre">Caja del primer curso</h2>
+                        <p class="cursos-desc">Aqui debe ir la descripcion del curso y falta añadir el enlace del curso</p>
+                    </div>
+                    <div class="cursos-item swiper-slide">
+                        <img src="img/gmail.png" alt="" class="cursos-img">
+                        <h2 class="cursos-nombre">Caja del primer curso</h2>
+                        <p class="cursos-desc">Aqui debe ir la descripcion del curso y falta añadir el enlace del curso</p>
+                    </div>
+                    <div class="cursos-item swiper-slide">
+                        <img src="img/Icono.png" alt="" class="cursos-img">
+                        <h2 class="cursos-nombre">Caja del primer curso</h2>
+                        <p class="cursos-desc">Aqui debe ir la descripcion del curso y falta añadir el enlace del curso</p>
+                    </div>
+                    <div class="cursos-item swiper-slide">
+                        <img src="img/Perfil.jpg" alt="" class="cursos-img">
+                        <h2 class="cursos-nombre">Caja del primer curso</h2>
+                        <p class="cursos-desc">Aqui debe ir la descripcion del curso y falta añadir el enlace del curso</p>
+                    </div>
+                    <div class="cursos-item swiper-slide">
+                        <img src="img/rmaps.png" alt="" class="cursos-img">
+                        <h2 class="cursos-nombre">Caja del primer curso</h2>
+                        <p class="cursos-desc">Aqui debe ir la descripcion del curso y falta añadir el enlace del curso</p>
+                    </div>
+                    <div class="cursos-item swiper-slide">
+                        <img src="img/usuario.png" alt="" class="cursos-img">
+                        <h2 class="cursos-nombre">Caja del primer curso</h2>
+                        <p class="cursos-desc">Aqui debe ir la descripcion del curso y falta añadir el enlace del curso</p>
+                    </div>
+                    <div class="cursos-item swiper-slide">
+                        <img src="img/Qgis.png" alt="" class="cursos-img">
+                        <h2 class="cursos-nombre">Caja del primer curso</h2>
+                        <p class="cursos-desc">Aqui debe ir la descripcion del curso y falta añadir el enlace del curso</p>
+                    </div>
+                </div>
+                <di class="swiper-pagination"></di>
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
+            </div>
         </div>
-        <div class="curso2">
-            <a href="" class="curso2-1">
-                <img src="img/Qgis.png" alt="Curso de Qgis">
-                <p>Caja del segundo cajon. Aqui debe ir la descripcion del curso y falta añadir el enlace del curso</p>
-            </a>
-        </div>
-     </div>
-     </div>
-        <button class="carrusel-button carrusel-button-rigth">&gt;</button>
-    </div>
-    <script src="carrucel.js"></script>
     <script>
         fetch('header.html')
             .then(response => response.text())
@@ -36,6 +65,8 @@
                 document.getElementById('header-container').innerHTML = data;
             });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/carrucel.js"></script>
     <script type="text/javascript"src="js/nav.js"></script>
 </body>
 </html>

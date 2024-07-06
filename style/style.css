@@ -96,61 +96,73 @@ body {
 .contacto img {
   margin-right: 0.5rem;
 }
-
-.carrusel-container {
-  display: flex;
-  align-items: center;
+.curso-principal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
-.carrusel {
-  overflow: hidden;
-  width: 80%;
+.slider-wrapper {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 70px 55px;
+  }
+
+.cursos .cursos-item{
+    color: #eceff1;
+    height: auto;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    backdrop-filter: blur(30px);
+    background: #5e6d6baf;
+    border: 1px solid #4c5a58;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
 }
 
-.cursos-principal{
-  font-size: 20px;
-  padding: 10px;
-  display: flex;
-  transition: transform 0.5s ease;
-  gap:10%
+.cursos .cursos-item:hover{
+    transform: scale(1.02);
 }
 
-.cursos-principal div{
-  min-width: 20%;
-  /* Ajusta esto según cuántos cursos quieres mostrar al mismo tiempo */
+.cursos .cursos-item .cursos-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    border: 3px solid #eceff1;
+    padding: 4px;
 }
 
-.cursos-principal a{
-    text-decoration: none;
+.cursos .cursos-item .cursos-desc{
+    font-size: 1.15rem;
+    color: #eceff1;
+    font-weight: 500;
+    margin: 14px 0 40px;
 }
-.cursos-principal .curso1,
-.cursos-principal .curso2{
-    background: white;
-    border-radius:10px;
-    color: #ecf0ef;
-    transition: all 0.3s;
-}
-.cursos-principal .curso1:hover,
-.cursos-principal .curso2:hover{
-    transform: scale(1.03);
-}
-.cursos-principal img {
-  margin-bottom: 5px;
-  margin-left: auto;
-  margin-right: auto;
-}
+.slider-wrapper .swiper-pagination-bullet {
+    background: #fff;
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+  }
+  .slider-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+  .slider-wrapper .swiper-slide-button {
+    color: #fff;
+    margin-top: -55px;
+    transition: 0.2s ease;
+  }
+  .slider-wrapper .swiper-slide-button:hover {
+    color: #4658ff;
+  }
 
-.carrusel-button {
-  background-color: #ccc;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.carrusel-button:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
-}
 
 @media screen and (max-width: 800px){
     .nav-links, .btn {
@@ -167,6 +179,12 @@ body {
      height: 55px;
      padding: 2px 10%;
      }
+     .slider-wrapper {
+        margin: 0 10px 40px;
+      }
+      .slider-wrapper .swiper-slide-button {
+        display: none;
+      }
 }
 
 /*Nav*/
