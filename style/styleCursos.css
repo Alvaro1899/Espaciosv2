@@ -9,6 +9,7 @@
 }
 body {
     background-color: #ecf0ef;
+    overflow: hidden; /* Evita la barra de desplazamiento del documento interno */
 }
 
 h1{
