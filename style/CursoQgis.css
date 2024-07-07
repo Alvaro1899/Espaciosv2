@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+    font-size: 15px;
+    color: #526360;
+}
+body {
+    background-color: #ecf0ef;
+
+}
+
+h1{
+    font-size: 20px;
+    color: #3b4644;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+h2,h3,h4{
+    font-size: 15px;
+    color: #3b4644;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.Cqgisp{
+    overflow: 
+}
+.Cqgis{
+    padding: 4rem;
+    text-align: justify;
+}
+details { 
+    margin-top: 1rem;
+    background-color: #f6f8fa;
+    width: 100%;
+    margin-bottom: 1rem;   
+    border-radius: 8px;  
+    border: 1px solid #d8e0e9;
+    color: #364f6b;
+    position: relative; 
+    max-width: 1000px;
+  }
+  details summary {  
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    list-style: none;
+  }
+  details p {
+    padding: 1rem;
+    margin: 0 1rem 1rem 1rem;
+    background: #f6f8fa;
+    border-left: 2px solid #364f6b;
+  }
+  
+  details:hover,
+  details[open] {
+    box-shadow: 5px 5px 15px #d9d9d9;
+  }
+  etails[open] {
+    background: #ffffff;
+  }
+  
+  details[open] summary {
+    font-weight: 600;
+  }
+  
+  details summary::before {
+    position: absolute;
+      content: "🛰️";    
+      font-size: 1.75rem;
+      top: 10px;
+      right: 16px;  
+  }
+  details[open] summary::before {
+    -webkit-animation: rotate 0.3s ease-in-out both;
+            animation: rotate-emoji 0.3s ease-in-out both;
+  }
+
+  @-webkit-keyframes rotate-emoji {
+    0% {
+      -webkit-transform: rotate(0);
+              transform: rotate(0);
+    }
+    100% {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg);
+    }
+  }
