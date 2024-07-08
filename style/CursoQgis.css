@@ -1,34 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
 *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Nunito", sans-serif;
-    font-size: 15px;
-    color: #526360;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
 }
-body {
-    background-color: #ecf0ef;
-
-}
-
-h1{
-    font-size: 20px;
-    color: #3b4644;
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-h2,h3,h4{
-    font-size: 15px;
-    color: #3b4644;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-.Cqgisp{
-    overflow: 
-}
-.Cqgis{
+.Curso_Qgis{
     padding: 4rem;
     text-align: justify;
 }
@@ -45,16 +23,10 @@ details {
   }
   details summary {  
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.5rem;
     padding: 1rem;
     cursor: pointer;
     list-style: none;
-  }
-  details p {
-    padding: 1rem;
-    margin: 0 1rem 1rem 1rem;
-    background: #f6f8fa;
-    border-left: 2px solid #364f6b;
   }
   
   details:hover,
