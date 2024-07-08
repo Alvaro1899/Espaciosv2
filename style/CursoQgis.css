@@ -4,11 +4,15 @@
   margin: 0;
   padding: 0;
   font-family: "Nunito", sans-serif;
-  font-size: 20px;
+  color: #364f6b;
 }
 .Curso_Qgis{
-    padding: 4rem;
+    padding: 3rem;
     text-align: justify;
+}
+.Curso_Qgis h1{
+  text-align: center;
+  margin-top: 10px;
 }
 details { 
     margin-top: 1rem;
@@ -20,13 +24,42 @@ details {
     color: #364f6b;
     position: relative; 
     max-width: 1000px;
+    font-size: 10px;
   }
   details summary {  
     font-weight: 400;
-    font-size: 0.5rem;
+    font-size: 18px;
     padding: 1rem;
     cursor: pointer;
     list-style: none;
+  }
+  details p{  
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (se ajusta según la proporción del video) */
+    margin: auto;
+  }
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .Curso_Qgis p,
+  .Curso_Qgis h2,
+  .Curso_Qgis h3{
+    font-size: 18px;
+  }
+  .Curso_Qgis h2,
+  .Curso_Qgis h3{
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
   }
   
   details:hover,
@@ -62,4 +95,18 @@ details {
       -webkit-transform: rotate(180deg);
               transform: rotate(180deg);
     }
+  }
+  @media screen and (max-width: 800px){
+    .Curso_Qgis{
+      padding: 1rem;
+    }
+    .Curso_Qgis p,
+    .Curso_Qgis h2,
+    .Curso_Qgis h3{
+      font-size: 15px;
+    }
+    details summary { 
+      font-size: 15px;
+    }
+
   }
