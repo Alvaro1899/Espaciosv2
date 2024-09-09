@@ -177,6 +177,41 @@ span{
   height: 100%;
 }
 
+.referencia {
+  font-size: 14px;
+  margin-top: 1em;
+  padding: 10px;
+  border-left: 4px solid #007bff; /* Línea vertical de color azul */
+  background-color: #f9f9f9; /* Fondo gris claro */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+.referencia p, a, i{
+  font-size: 14px;
+}
+.referencia a {
+  color: #007bff; /* Color azul para el enlace */
+  text-decoration: none;
+}
+.referencia a:hover {
+  text-decoration: underline; /* Subrayado al pasar el ratón sobre el enlace */
+}
+
+.imagen-container {
+  text-align: center;
+  margin: 20px 0;
+}
+.imagen-container img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 5px;
+}
+.pie-imagen {
+  font-size: 12px;
+  color: #555;
+  margin-top: 2px;
+}
+
 @-webkit-keyframes rotate-emoji {
   0% {
     -webkit-transform: rotate(0);
