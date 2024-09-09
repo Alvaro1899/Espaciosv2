@@ -9,7 +9,9 @@
 }
 .Curso_Qgis{
     padding: 3rem;
+    max-width: 1200px;
     text-align: justify;
+    margin: 1rem auto;  /* Centrar horizontalmente */
 }
 .Curso_Qgis h1{
   text-align: center;
