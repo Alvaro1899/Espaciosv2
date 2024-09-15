@@ -1,0 +1,99 @@
+.slider-wrapper {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 70px 55px;
+    z-index: 500;
+}
+.slider-wrapper .swiper-pagination-bullet {
+    background: #fff;
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+
+}
+.slider-wrapper .swiper-pagination-bullet-active {
+opacity: 1;
+}
+
+.swiper-pagination {
+    bottom: auto !important;
+    padding: 1rem;
+}
+
+.curso-principal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+    max-width: 1200px;
+}
+
+.cursos .cursos-item{
+    color: #eceff1;
+    height: auto;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    backdrop-filter: blur(30px);
+    background: #5e6d6baf;
+    border: 1px solid #4c5a58;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+.cursos .cursos-item:hover{
+    transform: scale(1.02);
+}
+
+.cursos .cursos-item .cursos-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    border: 3px solid #eceff1;
+    padding: 4px;
+}    
+.cursos .cursos-item .cursos-desc{
+    font-size: 0.8rem;
+    color: #eceff1;
+    font-weight: 500;
+    margin: 14px 0 40px;
+}
+
+.cursos a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: white;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+}
+
+.cursos-nombre, .cursos-desc{
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5) !important;
+}
+
+@media screen and (max-width: 800px){
+    .slider-wrapper {
+        margin: 0 10px 40px;
+    }
+    /* Asegura que las flechas se mantengan visibles */
+    .slider-wrapper .swiper-slide-button {
+        display: flex; /* Asegura que las flechas sean visibles */
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+    font-size: 20px !important;
+    }
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+    font-size: 20px !important;
+    }
+  }
