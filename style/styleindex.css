@@ -6,7 +6,7 @@
     transform: translate(-50%, -50%);
     max-width: 1000px;
     text-align: center;
-    background-color: rgba(51, 51, 51, 0.5); /* Fondo gris con 50% de opacidad */
+    background-color: #90a9a5; /* Fondo gris con 50% de opacidad */
     border-radius: 10px;
     padding: 15px;
 }
@@ -20,4 +20,103 @@
     font-size: 16px;
     margin: 1rem;
     text-align: center;
+}
+
+.inicio_container{
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    pointer-events: auto;
+    opacity: 1; /* Asegúrate de que sea visible por defecto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 1);
+}
+
+button {
+    background-color: #ecf0ef; /* Verde vibrante */
+    color: #90a9a5; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 2px 4px; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño del texto */
+    border-radius: 6px; /* Bordes redondeados */
+    cursor: pointer; /* Manito al pasar */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+button:hover {
+    background-color: #90a9a5; /* Verde más oscuro al pasar */
+    color: #ecf0ef;
+}
+
+.show {
+    opacity: 1; /* Visible cuando se añade la clase */
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+/* Estilo general del contenedor */
+.contain_novedades {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 100%;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+.cuadro_novedades{
+    flex: 1 1 calc(100% - 10px);
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+/* Estilo de los recuadros individuales */
+.cuadro_novedades_individual {
+    margin-top: 1%;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
+    text-align: center;
+}
+.cuadro_novedades_individual:hover{
+    transform: scale(1.01);
+    transition: 0.2s;
+}
+
+/* Encabezados dentro de los recuadros */
+.cuadro_novedades_individual h3 {
+    color: #90a9a5;
+    margin-bottom: 10px;
+}
+
+/* Imágenes dentro de los recuadros */
+.cuadro_novedades_individual img {
+    width: auto;
+    max-width: 120px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+/* Listas dentro de los recuadros */
+.cuadro_novedades_individual ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cuadro_novedades_individual ul li {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333333;
 }

@@ -10,11 +10,24 @@
 <body>
     <div id="header-container"></div>
 
-    <div class="inicio">
-        <h1>Bienvenidos</h1>
-        <h2>Espacios v2</h2>
-        <p>¡Gracias por visitar mi página! Espero que encuentres lo que buscas y que te sea de gran ayuda. Si tienes alguna pregunta o necesitas asistencia, no dudes en contactarme. ¡Que tengas un excelente día!</p>
+    <div class="inicio_container" id="inicio_container">
+        <div class="inicio">
+            <h1>Bienvenidos</h1>
+            <h2>Espacios v2</h2>
+            <p>¡Gracias por visitar mi página! Espero que encuentres lo que buscas y que te sea de gran ayuda. Si tienes alguna pregunta o necesitas asistencia, no dudes en contactarme. ¡Que tengas un excelente día!</p>
+            <button id="close">Cerrar</button>
+        </div>    
     </div> 
+
+<div class="contain_novedades">
+    <div class="cuadro_novedades">
+        <div class="cuadro_novedades_individual">
+            <h3>¿Qué son las bases de datos?</h3>
+            <img src="img/BD_INICIO.jpg" alt="Imagen creada con Copilot">
+            <p>Proximamente</p>
+        </div>
+    </div>
+</div>
 
     <script>
         fetch('header.html')
@@ -23,6 +36,7 @@
                 document.getElementById('header-container').innerHTML = data;
             });
     </script>
-    <script type="text/javascript"src="js/nav.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="js/bienvenida.js"></script>
 </body>
 </html>
