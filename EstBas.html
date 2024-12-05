@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espacios</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/EstBas.css">
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <div class="Curso_Qgis">
+        <h1>Cursos: Estadística Básica</h1>
+        <p></p>
+        
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    </script>
+    <script src="js/nav.js"></script>
+</body>
+</html>

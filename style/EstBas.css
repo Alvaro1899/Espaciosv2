@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito", sans-serif;
+  color: #364f6b;
+  z-index:2;
+}
+.Curso_Qgis{
+    padding: 3rem;
+    max-width: 1200px;
+    text-align: justify;
+    margin: 1rem auto;  /* Centrar horizontalmente */
+    background-color: #f6f8fa;
+}
+.Curso_Qgis h1{
+  text-align: center;
+  margin-top: 10px;
+}
+details { 
+  margin-top: 1rem;
+  background-color: #f6f8fa;
+  width: 100%;
+  margin: 1rem auto;  /* Centrar horizontalmente */
+  border-radius: 8px;  
+  border: 1px solid #d8e0e9;
+  color: #364f6b;
+  position: relative; 
+  max-width: 1200px;
+  font-size: 10px;
+}
+
+details summary {  
+  font-weight: 400;
+  font-size: 18px;
+  padding: 1rem;
+  cursor: pointer;
+  list-style: none;
+}
+details p{  
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.Curso_Qgis p,
+.Curso_Qgis h2,
+.Curso_Qgis h3{
+  font-size: 18px;
+}
+.Curso_Qgis h2,
+.Curso_Qgis h3{
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+details:hover,
+details[open] {
+  box-shadow: 5px 5px 15px #d9d9d9;
+}
+etails[open] {
+  background: #ffffff;
+}
+
+details[open] summary {
+  font-weight: 600;
+}
+
+details summary::before {
+  position: absolute;
+  content: "🛰️";    
+  font-size: 1.75rem;
+  top: 10px;
+  right: 16px;  
+}
+details[open] summary::before {
+-webkit-animation: rotate 0.3s ease-in-out both;
+      animation: rotate-emoji 0.3s ease-in-out both;
+}
+
+.movimientobtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.izquierdabtn {
+  display: flex;
+}
+
+.boton1{
+  text-align: right;
+}
+
+.boton {
+  display: inline-block;
+  font-size: 16px;
+  padding: 1px 10px;
+  background-color: #90a9a5;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+  margin-right: 0.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.boton:hover {
+  background: #eceff1;
+  color: #90a9a5;
+  transform: scale(1.05);
+
+}
+
+.botondesact{
+  display: inline-block;
+  font-size: 16px;
+  padding: 1px 10px;
+  background-color: #a0a0a0;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+  margin-right: 0.2rem;
+}
+
+span{
+  font-size: 14px;
+}
+
+.txtcurso{
+  margin-top: 1rem;
+  background-color: #f6f8fa;
+  width: 100%;
+  margin: 1rem auto;  /* Centrar horizontalmente */
+  border-radius: 8px;  
+  border: 1px solid #d8e0e9;
+  color: #364f6b;
+  position: relative; 
+  max-width: 1200px;
+  text-align: justify;
+  padding: 1rem;
+}
+.txtcurso h1{
+  text-align: center;
+  font-size: 25px;
+}
+.txtcurso h2, h3, h4{
+  font-size: 18px;
+}
+.txtcurso p, li, ul{
+  font-size: 16px;
+}
+.txtcurso li strong{
+  font-size: 16px;
+}
+.txtcurso li{
+  margin-left: 2rem;
+}
+.txtcurso h1, h2, h3, h4, p, li{
+  margin-top: 0.5rem;
+
+}
+
+.video-container {
+  position: relative;
+  width: auto;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio (se ajusta según la proporción del video) */
+  margin: 0.2rem;
+}
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.referencia {
+  font-size: 14px;
+  margin-top: 1em;
+  padding: 10px;
+  border-left: 4px solid #007bff; /* Línea vertical de color azul */
+  background-color: #f9f9f9; /* Fondo gris claro */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+.referencia p, a, i{
+  font-size: 14px;
+}
+.referencia a {
+  color: #007bff; /* Color azul para el enlace */
+  text-decoration: none;
+}
+.referencia a:hover {
+  text-decoration: underline; /* Subrayado al pasar el ratón sobre el enlace */
+}
+
+.imagen-container {
+  text-align: center;
+  margin: 20px 0;
+}
+.imagen-container img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 5px;
+}
+.pie-imagen {
+  font-size: 12px;
+  color: #555;
+  margin-top: 2px;
+}
+
+@-webkit-keyframes rotate-emoji {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+@media screen and (max-width: 800px){
+  .Curso_Qgis{
+    padding: 1rem;
+  }
+  .Curso_Qgis p,
+  .Curso_Qgis h2,
+  .Curso_Qgis h3{
+    font-size: 15px;
+  }
+  details summary { 
+    font-size: 15px;
+  }
+
+}

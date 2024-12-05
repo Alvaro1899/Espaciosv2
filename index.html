@@ -6,10 +6,11 @@
     <title>Espacios</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/styleindex.css">
+    <link rel="stylesheet" href="style/carrucelindex.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 <body>
     <div id="header-container"></div>
-
     <div class="inicio_container" id="inicio_container">
         <div class="inicio">
             <h1>Bienvenidos</h1>
@@ -17,10 +18,60 @@
             <p>¡Gracias por visitar mi página! Espero que encuentres lo que buscas y que te sea de gran ayuda. Si tienes alguna pregunta o necesitas asistencia, no dudes en contactarme. ¡Que tengas un excelente día!</p>
             <button id="close">Cerrar</button>
         </div>    
-    </div> 
+    </div>
+
+    <div class="recomendacion-principal swiper">
+        <div class="slider-wrapper">
+            <div class="recomendaciones swiper-wrapper">
+                <div class="recomendaciones-item swiper-slide">
+                    <a href="https://www.alfaomegaeditor.com.mx/default/catalogo/profesional/computacion/el-gran-libro-de-html5-css3-y-javascript.html" target="_blank" rel="noopener noreferrer">
+                    <img src="img/libros y recomendaciones/LIBROHTML.png" alt="" class="recomendaciones-img">
+                    </a><a href="https://www.alfaomegaeditor.com.mx/default/catalogo/profesional/computacion/el-gran-libro-de-html5-css3-y-javascript.html" target="_blank" rel="noopener noreferrer">
+                    <h2 class="recomendaciones-nombre">El gran libro de HTML5, CSS3 y JavaScript</h2>
+                    </a>
+                </div>
+                <div class="recomendaciones-item swiper-slide">
+                    <a href="https://antonibosch.com/libro/estadistica-aplicada-basica-2-ed" target="_blank" rel="noopener noreferrer">
+                    <img src="img/libros y recomendaciones/EstadisticaMooreLibro.webp" alt="" class="recomendaciones-img">
+                    </a><a href="https://antonibosch.com/libro/estadistica-aplicada-basica-2-edl" target="_blank" rel="noopener noreferrer">
+                    <h2 class="recomendaciones-nombre">Estadística aplicada básica. Moore</h2>
+                    </a>
+                </div>
+                <div class="recomendaciones-item swiper-slide">
+                    <a href="https://www.academia.edu/34899097/Montgomery_y_Runger_Probabilidad_y_Estadistica_Aplicada_a_La_Ingenieria" target="_blank" rel="noopener noreferrer">
+                    <img src="img/libros y recomendaciones/PyEstadisticaMontgomery.jpg" alt="" class="recomendaciones-img">
+                    </a><a href="https://www.academia.edu/34899097/Montgomery_y_Runger_Probabilidad_y_Estadistica_Aplicada_a_La_Ingenieria" target="_blank" rel="noopener noreferrer">
+                    <h2 class="recomendaciones-nombre">Probabilidad y estadística aplicada a la ingeniería. Montgomery</h2>
+                    </a>
+                </div>
+                <div class="recomendaciones-item swiper-slide">
+                    <a href="https://www.uv.es/~ayala/docencia/nmr/nmr13.pdf" target="_blank" rel="noopener noreferrer">
+                    <img src="img/libros y recomendaciones/EstadisticaBasicaR.png" alt="" class="recomendaciones-img">
+                    </a><a href="https://www.uv.es/~ayala/docencia/nmr/nmr13.pdf"target="_blank" rel="noopener noreferrer">
+                    <h2 class="recomendaciones-nombre">Estadística básica. Ayala, G</h2>
+                    </a>
+                </div>
+                <div class="recomendaciones-item swiper-slide">
+                    <a href="https://www.ign.es/web/libros-digitales/mundo-de-los-mapas"target="_blank" rel="noopener noreferrer">
+                    <img src="img/libros y recomendaciones/MundodelosMapas.jpeg" alt="" class="recomendaciones-img">
+                    </a><a href="https://www.ign.es/web/libros-digitales/mundo-de-los-mapas"target="_blank" rel="noopener noreferrer">
+                    <h2 class="recomendaciones-nombre">El mundo de los mapas. International Cartographic Association</h2>
+                    </a>
+                </div>
+            </div>
+            <di class="swiper-pagination"></di>
+            <div class="swiper-slide-button swiper-button-prev"></div>
+            <div class="swiper-slide-button swiper-button-next"></div>
+        </div>
+    </div>
 
 <div class="contain_novedades">
     <div class="cuadro_novedades">
+        <div class="cuadro_novedades_individual">
+            <h3>Estadística Básica</h3>
+            <img src="img/EST_INICIO.jpg" alt="Imagen creada con Copilot">
+            <p>La estadística analiza datos para tomar decisiones. Involucra poblaciones, muestras y datos cualitativos y cuantitativos. Usa medidas de tendencia central (media, mediana, moda) y dispersión (rango, varianza, desviación estándar). Incluye distribuciones como la normal y la binomial, y realiza estimaciones y pruebas de hipótesis para inferencias. 📊📈</p>
+        </div>
         <div class="cuadro_novedades_individual">
             <h3>¿Qué son las bases de datos?</h3>
             <img src="img/BD_INICIO.jpg" alt="Imagen creada con Copilot">
@@ -28,7 +79,6 @@
         </div>
     </div>
 </div>
-
     <script>
         fetch('header.html')
             .then(response => response.text())
@@ -38,5 +88,7 @@
     </script>
     <script src="js/nav.js"></script>
     <script src="js/bienvenida.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/carrucel.js"></script>
 </body>
 </html>
