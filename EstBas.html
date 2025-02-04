@@ -3,17 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Espacios</title>
+    <title>Estadística Básica con R</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/EstBas.css">
 </head>
 <body>
     <div id="header-container"></div>
 
-    <div class="Curso_Qgis">
-        <h1>Cursos: Estadística Básica</h1>
-        <p></p>
-        
+    <div class="Curso_EstBas">
+        <h1>Estadística Básica con R</h1>
+        <p>El objetivo de esta página es ofrecer ejemplos y herramientas para el análisis estadístico utilizando R.</p>
+
+        <!-- Módulo 0: Conociendo tus Datos -->
+        <a href="EstBast_0.html"><h2>Módulo 0: Conociendo tus Datos</h2></a>
+        <h3>Exploración inicial de datos</h3>
+        <ul>
+            <li>Carga de datos (<code>read.csv()</code>, <code>read.table()</code>, <code>read_excel()</code> del paquete <code>readxl</code>).</li>
+            <li>Visualización de la estructura (<code>str()</code>, <code>head()</code>, <code>tail()</code>).</li>
+            <li>Resumen estadístico rápido (<code>summary()</code>).</li>
+        </ul>
+        <h3>Limpieza de datos</h3>
+        <ul>
+            <li>Identificación y manejo de valores faltantes (<code>is.na()</code>, <code>na.omit()</code>, <code>complete.cases()</code>).</li>
+            <li>Detección y tratamiento de outliers (<code>boxplot()</code>, <code>identify()</code>).</li>
+            <li>Transformación de variables (<code>as.factor()</code>, <code>as.numeric()</code>, <code>mutate()</code> del paquete <code>dplyr</code>).</li>
+        </ul>
+        <h3>Manipulación de datos</h3>
+        <ul>
+            <li>Filtrado y selección de columnas (<code>filter()</code>, <code>select()</code> del paquete <code>dplyr</code>).</li>
+            <li>Creación de nuevas variables (<code>mutate()</code>).</li>
+            <li>Agrupación y resumen de datos (<code>group_by()</code>, <code>summarize()</code> del paquete <code>dplyr</code>).</li>
+        </ul>
+        <h3>Visualización exploratoria</h3>
+        <ul>
+            <li>Gráficos básicos (<code>plot()</code>, <code>hist()</code>, <code>boxplot()</code>).</li>
+            <li>Uso de <code>ggplot2</code> para exploración (<code>ggplot()</code>, <code>geom_point()</code>, <code>geom_boxplot()</code>).</li>
+        </ul>
+
+        <!-- Módulo 1: Estadística Descriptiva -->
+        <h2>Módulo 1: Estadística Descriptiva</h2>
+        <h3>Medidas de tendencia central</h3>
+        <ul>
+            <li>Media, mediana y moda (<code>mean()</code>, <code>median()</code>, <code>table()</code>).</li>
+            <li>Comparación de medidas y cuándo usar cada una.</li>
+        </ul>
+        <h3>Medidas de dispersión</h3>
+        <ul>
+            <li>Rango, varianza, desviación estándar (<code>range()</code>, <code>var()</code>, <code>sd()</code>).</li>
+            <li>Coeficiente de variación.</li>
+        </ul>
+        <h3>Visualización de datos</h3>
+        <ul>
+            <li>Histogramas (<code>hist()</code>).</li>
+            <li>Diagramas de caja (<code>boxplot()</code>).</li>
+            <li>Gráficos de densidad (<code>density()</code>).</li>
+        </ul>
+        <h3>Análisis de distribuciones</h3>
+        <ul>
+            <li>Asimetría y curtosis (<code>skewness()</code>, <code>kurtosis()</code> del paquete <code>e1071</code>).</li>
+        </ul>
+
+        <!-- Módulo 2: Probabilidad y Distribuciones -->
+        <h2>Módulo 2: Probabilidad y Distribuciones</h2>
+        <h3>Conceptos básicos de probabilidad</h3>
+        <ul>
+            <li>Espacio muestral, eventos, probabilidad condicional.</li>
+            <li>Simulación de experimentos aleatorios (<code>sample()</code>).</li>
+        </ul>
+        <h3>Distribuciones de probabilidad</h3>
+        <ul>
+            <li>Distribuciones discretas: Binomial, Poisson (<code>dbinom()</code>, <code>ppois()</code>).</li>
+            <li>Distribuciones continuas: Normal, t de Student, Chi-cuadrado (<code>dnorm()</code>, <code>pt()</code>, <code>pchisq()</code>).</li>
+            <li>Cálculo de probabilidades y cuantiles (<code>pnorm()</code>, <code>qnorm()</code>).</li>
+        </ul>
+        <h3>Teorema del Límite Central</h3>
+        <ul>
+            <li>Simulación y visualización del teorema.</li>
+        </ul>
+
+        <!-- Módulo 3: Inferencia Estadística -->
+        <h2>Módulo 3: Inferencia Estadística</h2>
+        <h3>Estimación puntual y por intervalos</h3>
+        <ul>
+            <li>Estimación de la media y proporción.</li>
+            <li>Intervalos de confianza (<code>t.test()</code>, <code>prop.test()</code>).</li>
+        </ul>
+        <h3>Pruebas de hipótesis</h3>
+        <ul>
+            <li>Pruebas para una y dos muestras:
+                <ul>
+                    <li>Prueba t de Student (<code>t.test()</code>).</li>
+                    <li>Prueba de proporciones (<code>prop.test()</code>).</li>
+                    <li>Prueba de chi-cuadrado (<code>chisq.test()</code>).</li>
+                </ul>
+            </li>
+            <li>Interpretación de p-valores.</li>
+        </ul>
+        <h3>Análisis de varianza (ANOVA)</h3>
+        <ul>
+            <li>ANOVA de una vía (<code>aov()</code>).</li>
+            <li>Pruebas post-hoc (Tukey HSD, <code>TukeyHSD()</code>).</li>
+        </ul>
+
+        <!-- Módulo 4: Correlación y Regresión -->
+        <h2>Módulo 4: Correlación y Regresión</h2>
+        <h3>Correlación</h3>
+        <ul>
+            <li>Coeficiente de correlación de Pearson (<code>cor()</code>).</li>
+            <li>Matriz de correlación (<code>cor.test()</code>).</li>
+            <li>Visualización con gráficos de dispersión (<code>plot()</code>).</li>
+        </ul>
+        <h3>Regresión lineal simple</h3>
+        <ul>
+            <li>Ajuste del modelo (<code>lm()</code>).</li>
+            <li>Interpretación de coeficientes.</li>
+            <li>Diagnóstico del modelo (<code>summary()</code>, <code>plot()</code> para residuos).</li>
+        </ul>
+        <h3>Regresión lineal múltiple</h3>
+        <ul>
+            <li>Selección de variables.</li>
+            <li>Multicolinealidad (VIF, <code>vif()</code> del paquete <code>car</code>).</li>
+        </ul>
+
+        <!-- Módulo 5: Análisis de Datos Categóricos -->
+        <h2>Módulo 5: Análisis de Datos Categóricos</h2>
+        <h3>Tablas de contingencia</h3>
+        <ul>
+            <li>Creación y análisis (<code>table()</code>, <code>xtabs()</code>).</li>
+            <li>Prueba de independencia (<code>chisq.test()</code>).</li>
+        </ul>
+        <h3>Pruebas no paramétricas</h3>
+        <ul>
+            <li>Prueba de Wilcoxon (<code>wilcox.test()</code>).</li>
+            <li>Prueba de Kruskal-Wallis (<code>kruskal.test()</code>).</li>
+        </ul>
+
+        <!-- Módulo 6: Introducción a Modelos Estadísticos Avanzados -->
+        <h2>Módulo 6: Introducción a Modelos Estadísticos Avanzados</h2>
+        <h3>Regresión logística</h3>
+        <ul>
+            <li>Ajuste del modelo (<code>glm()</code>).</li>
+            <li>Interpretación de odds ratios.</li>
+        </ul>
+        <h3>Introducción a modelos lineales generalizados (GLM)</h3>
+        <ul>
+            <li>Aplicaciones y ejemplos.</li>
+        </ul>
+
+        <!-- Módulo 7: Visualización Avanzada con ggplot2 -->
+        <h2>Módulo 7: Visualización Avanzada con ggplot2</h2>
+        <h3>Gráficos avanzados</h3>
+        <ul>
+            <li>Uso de <code>ggplot2</code> para visualización estadística.</li>
+            <li>Personalización de gráficos (temas, etiquetas, leyendas).</li>
+        </ul>
+        <h3>Gráficos para análisis exploratorio</h3>
+        <ul>
+            <li>Facetas (<code>facet_wrap()</code>, <code>facet_grid()</code>).</li>
+            <li>Gráficos de dispersión con ajustes (<code>geom_smooth()</code>).</li>
+        </ul>
+
+        <!-- Módulo 8: Proyecto Final -->
+        <h2>Módulo 8: Proyecto Final</h2>
+        <h3>Análisis de un conjunto de datos real</h3>
+        <ul>
+            <li>Limpieza y preparación de datos.</li>
+            <li>Aplicación de técnicas estadísticas aprendidas.</li>
+            <li>Presentación de resultados con visualizaciones y conclusiones.</li>
+        </ul>
+
+        <!-- Paquetería -->
+        <h2>Paquetería Utilizada</h2>
+        <ul>
+            <li><code>dplyr</code>: Manipulación de datos.</li>
+            <li><code>ggplot2</code>: Visualización avanzada.</li>
+            <li><code>readxl</code>: Lectura de archivos de Excel.</li>
+            <li><code>tidyr</code>: Limpieza y organización de datos.</li>
+            <li><code>car</code>: Análisis de regresión y diagnóstico de modelos.</li>
+            <li><code>e1071</code>: Cálculo de asimetría y curtosis.</li>
+            <li><code>MASS</code>: Funciones avanzadas de estadística.</li>
+            <li><code>psych</code>: Funciones descriptivas avanzadas.</li>
+            <li><code>broom</code>: Organización de resultados de modelos.</li>
+            <li><code>corrplot</code>: Visualización de matrices de correlación.</li>
+            <li><code>rmarkdown</code>: Creación de informes reproducibles.</li>
+            <li><code>knitr</code>: Integración de código y resultados en documentos.</li>
+        </ul>
+    </div>
 
     <script>
         fetch('header.html')

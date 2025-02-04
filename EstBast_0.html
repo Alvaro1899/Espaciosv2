@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadística Básica con R</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/EstBas.css">
+</head>
+<body>
+    <div id="header-container"></div>
+    <div class="Curso_EstBas">
+        <h2>Módulo 0: Conociendo tus Datos</h2>
+        <h3>Exploración incial de datos</h3>
+        <p>En este módulo, aprenderás a cargar y explorar tus datos en R. Estos son los primeros pasos esenciales para cualquier análisis de datos.</p>
+        <p>Para este ejemplo, pueden dascargar la información de <a href="https://www.kaggle.com/datasets/abhishekrp1517/sales-data-for-economic-data-analysis"><b>Kaggle</b></a></p>
+        <h4>Carga de Datos</h4>
+        <p>La carga de datos es el primer paso en cualquier análisis. En R, existen varias funciones para importar datos desde diferentes formatos. A continuación, se describen las funciones más comunes:</p>
+        <li>Cargar archivos CSV
+                <p>Los archivos CSV (valores separados por comas) son uno de los formatos más comunes. Para cargarlos, puedes usar las funciones <code>read.csv()</code> o <code>read_csv()</code> del paquete 'readr'.</p>
+            </li>
+        <li>Cargar archivos de texto (<code>read.table</code>)
+                <p>Para archivos de texto con delimitadores personalizados (como tabulaciones o espacios), se usa <code>read.table()</code>.</p>
+            </li>
+        <li>Cargar archivos de Excel (<code>read_excel</code>)
+                <p>Para archivos de Excel, se utiliza el paquete readxl. Primero, instala y carga el paquete, luego usa la función <code>read_excel()</code>.</p>
+            </li>
+        <div class="output-container">
+            <iframe src="Cursos/m0_1.html"></iframe>
+        </div>
+        
+        <h4>Verificación</h4>
+        <p>Después de cargar los datos, es importante verificar que se hayan importado correctamente. Puedes hacerlo imprimiendo el objeto datos o revisando sus dimensiones.</p>
+        <div class="output-container">
+            <iframe src="Cursos/m0_2.html"></iframe>
+        </div>
+        <p>Entre lo que podemos visualizar, está primero el número de filas y columnas (34,867 × 16). Después, vemos una fracción de la tabla con los tipos de datos que contiene. En este caso, tenemos tipos como `dbl`, `dttm` y `chr`.</p>
+        <p>Estos son algunos de los tipos de datos que podemos encontrarnos:</p>
+        <table><thead>
+            <tr>
+              <th>Tipo de dato</th>
+              <th>Significado</th>
+            </tr></thead>
+          <tbody>
+            <tr>
+              <td>dbl</td>
+              <td>Double: Números decimales (valores numéricos con punto flotante).</td>
+
+            </tr>
+            <tr>
+              <td>dttm</td>
+              <td>Datetime: Fechas y horas (almacena información de fecha y hora).</td>
+            </tr>
+            <tr>
+              <td>chr</td>
+              <td>Character: Texto o cadenas de caracteres.</td>
+            </tr>
+            <tr>
+              <td>int</td>
+              <td>Integer: Números enteros.</td>
+            </tr>
+            <tr>
+              <td>fact</td>
+              <td>Factor: Variables categóricas con niveles predefinidos.</td>
+            </tr>
+          </tbody>
+          </table>
+    
+        <h3>Visualización de la Estructura</h3>
+        <p>Una vez cargados los datos, es crucial entender su estructura. R ofrece varias funciones para explorar rápidamente los datos.</p>
+        <li>Función <code>str()</code></li>
+        <p>La función <code>str()</code> (structure) proporciona un resumen compacto de la estructura del dataset, incluyendo los tipos de datos de cada columna.</p>
+        <li>Funciones <code>head()</code> y <code>tail</code></li>
+        <p><code>head()</code> muestra las primeras filas del dataset (por defecto, 6 filas). <code>tail</code> muestra las últimas filas del dataset.</p>
+        <li>Verificación de nombres de columnas</li>
+        <p>Puedes revisar los nombres de las columnas con la función <code>names()</code>.</p>
+        <p>Resultos:</p>
+
+        <div class="output-container">
+            <iframe src="Cursos/m0_3.html"></iframe>
+        </div>
+<h3>Resumen Estadístico Rápido</h3>
+<p>Para obtener un resumen estadístico rápido de los datos, R ofrece la función <code>summary()</code>. Esta función proporciona estadísticas descriptivas para cada columna, dependiendo de su tipo de dato.</p>
+<p>Esta función calcula estadísticas como la media, mediana, mínimo, máximo y cuartiles para columnas numéricas. Para columnas de texto o factores, muestra la frecuencia de los valores.</p>
+<p>Hay que destacar que el tipo de resumen dependerá del tipo de dato que obtengamos. 
+    <li>Columnas numéricas: Muestra estadísticas como la media, mediana y cuartiles.</li>
+    <li>Columnas de texto: Muestra la longitud y el tipo de dato.</li>
+    <li>Columnas de fecha/hora: Muestra el rango de fechas.</li></p>
+    <div class="output-container">
+        <iframe src="Cursos/m0_4.html"></iframe>
+    </div>
+    <p>Lo primero que destaca en el resumen obtenido es el resultado de la variable 'index'. Es importante recordar que esta variable es un índice o identificador único para cada registro en nuestra base de datos, por lo que no tiene sentido obtener un resumen estadístico de ella (como la media, mínimo o máximo). Por el momento, podemos ignorar esta variable en el análisis estadístico. Sin embargo, si deseamos asegurarnos de que en futuras ocasiones esta variable se maneje correctamente, podemos convertirla al formato de texto 'chr') al cargar los datos o después de haberlos importado.</p>
+    <li>Al cargar datos</li>
+    <p>El paquete 'readr' permite especificar el tipo de dato de cada columna al cargar el archivo. Para forzar que una columna sea leída como carácter, usa <code>col_types</code> y define la columna como 'col_character()'.</p>
+    <p>En 'read.csv()', si la columna contiene números, R podría convertirlos automáticamente a tipo numérico. Para evitarlo, puedes usar el argumento <code>colClasses</code> para especificar el tipo de dato de cada columna.</p>
+    <p>Si estás cargando un archivo de Excel con <code>read_excel()</code> del paquete 'readxl', puedes usar el argumento <code>col_types</code> para especificar que una columna sea leída como texto.</p>
+    <div class="output-container">
+        <iframe src="Cursos/m0_5.html"></iframe>
+    </div>
+    <li>Convertir una columna a carácter después de cargar los datos</li>
+    <p>Si ya has cargado los datos y te das cuenta de que la columna de índice se ha leído como numérica, puedes convertirla a carácter usando la función as.character().</p>
+    <div class="output-container">
+        <iframe src="Cursos/m0_6.html"></iframe>
+    </div>
+
+
+    </div>
+    </div>
+
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-container').innerHTML = data;
+            });
+    </script>
+    <script src="js/nav.js"></script>
+</body>
+</html>
